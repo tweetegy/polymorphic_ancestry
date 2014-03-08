@@ -1,0 +1,7 @@
+= link_to "Back to Actors", actors_path
+%br
+%h3= @actor.full_name
+%h4= " Appears in (#{pluralize(@actor.movies.count, 'movie')})"
+
+= nested_comments @comments
+= render "comments/form"

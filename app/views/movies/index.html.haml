@@ -1,0 +1,5 @@
+%p=link_to "Home", root_path
+%h2 The Movies!
+%ul
+- @movies.each do |movie|
+  %li=link_to movie.title, movie

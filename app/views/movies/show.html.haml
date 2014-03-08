@@ -1,0 +1,7 @@
+= link_to "Back to Movies", movies_path
+%br
+%h3= @movie.title
+%h4= " (#{@movie.duration} minutes)"
+
+= nested_comments @comments
+= render "comments/form"

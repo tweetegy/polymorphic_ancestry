@@ -1,0 +1,9 @@
+%a.pull-left{:href=>"#"}
+  %img.media-object{ :src => "/assets/anonuser.jpg", :style=> "width: 64px; height: 64px;" }
+.media-body
+  %h4.media-heading Anonymous User
+  %i= comment.created_at.strftime('%b %d, %Y at %H:%M') 
+  %p= simple_format comment.content
+  .actions
+    = link_to "Reply", new_polymorphic_path([@commentable, Comment.new], :parent_id => comment)
+  = nested_comments comment.children

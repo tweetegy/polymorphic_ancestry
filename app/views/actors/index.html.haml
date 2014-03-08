@@ -1,0 +1,5 @@
+%p=link_to "Home", root_path
+%h2 The Actors!
+%ul
+- @actors.each do |actor|
+  %li=link_to actor.full_name, actor
